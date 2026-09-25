@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
 type CourseCardProps = {
   id: string;
   title: string;
@@ -16,16 +19,21 @@ export default function CourseCard({
   likes,
 }: CourseCardProps) {
   return (
-    <Link
-      href={`/courses/${id}`}
-      className="block rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"
-    >
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p className="text-gray-600 mt-1">{description}</p>
-      <div className="flex items-center justify-between mt-3 text-sm text-gray-500">
-        <span>{credits} credits</span>
-        <span>❤ {likes}</span>
-      </div>
+    <Link href={`/courses/${id}`}>
+      <Card className="h-full transition-shadow hover:shadow-md">
+        <CardHeader>
+          <CardTitle>{title}</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-3">
+          <p className="text-slate-600">{description}</p>
+          <div className="flex items-center justify-between text-sm text-slate-500">
+            <span>{credits} credits</span>
+            <Button variant="ghost" size="sm" className="pointer-events-none">
+              ❤ {likes}
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
     </Link>
   );
 }
