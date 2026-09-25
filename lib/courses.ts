@@ -5,6 +5,7 @@ export type Course = {
   credits: number;
   isElective: boolean;
   likes: number;
+  courseraUrl: string;
 };
 
 const courses: Course[] = [
@@ -15,6 +16,7 @@ const courses: Course[] = [
     credits: 5,
     isElective: false,
     likes: 24,
+    courseraUrl: "https://www.coursera.org/learn/introduction-to-next-js",
   },
   {
     id: "backend-fastapi",
@@ -23,6 +25,8 @@ const courses: Course[] = [
     credits: 5,
     isElective: false,
     likes: 19,
+    courseraUrl:
+      "https://www.coursera.org/learn/introduction-to-fastapi-framework",
   },
   {
     id: "databases-postgresql",
@@ -31,6 +35,7 @@ const courses: Course[] = [
     credits: 5,
     isElective: false,
     likes: 15,
+    courseraUrl: "https://www.coursera.org/learn/intermediate-postgresql",
   },
   {
     id: "api-design",
@@ -39,6 +44,7 @@ const courses: Course[] = [
     credits: 4,
     isElective: true,
     likes: 11,
+    courseraUrl: "https://www.coursera.org/learn/advanced-api-technologies",
   },
   {
     id: "web-security",
@@ -47,6 +53,8 @@ const courses: Course[] = [
     credits: 4,
     isElective: false,
     likes: 21,
+    courseraUrl:
+      "https://www.coursera.org/learn/codio-software-security-for-web-applications",
   },
   {
     id: "ai-integration",
@@ -55,6 +63,8 @@ const courses: Course[] = [
     credits: 5,
     isElective: true,
     likes: 32,
+    courseraUrl:
+      "https://www.coursera.org/learn/packt-build-apps-and-fine-tune-llms-using-the-openai-api-16vi7",
   },
 ];
 
