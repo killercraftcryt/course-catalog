@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getCourse, getCourses } from "@/lib/courses";
 import LikeButton from "@/components/LikeButton";
+import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
   const courses = await getCourses();
@@ -21,10 +22,17 @@ export default async function CoursePage({
 
   return (
     <div className="flex flex-col gap-4 max-w-2xl">
-      <h1 className="text-3xl font-bold">{course.title}</h1>
-      <p className="text-gray-600">{course.description}</p>
-      <span className="text-sm text-gray-500">{course.credits} credits</span>
-      <LikeButton initialLikes={course.likes} />
+      <h1 className="text-3xl font-bold font-heading">{course.title}</h1>
+      <p className="text-slate-600">{course.description}</p>
+      <span className="text-sm text-slate-500">{course.credits} credits</span>
+      <div className="flex flex-wrap items-center gap-3">
+        <LikeButton initialLikes={course.likes} />
+        <Button asChild variant="default" className="bg-brand hover:bg-brand/90">
+          <a href={course.courseraUrl} target="_blank" rel="noopener noreferrer">
+            View on Coursera ↗
+          </a>
+        </Button>
+      </div>
     </div>
   );
 }
