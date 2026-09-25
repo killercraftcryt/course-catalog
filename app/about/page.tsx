@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <div className="flex flex-col gap-4 max-w-2xl">
-      <h1 className="text-3xl font-bold">About</h1>
+      <h1 className="text-3xl font-bold font-heading">About</h1>
       <p className="text-gray-600">
         This course catalog was built as the semester project for the
         &quot;Advanced Web Technologies&quot; course. It showcases the App

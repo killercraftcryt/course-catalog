@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { Sora } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 
 export const metadata: Metadata = {
   title: "Course Catalog",
@@ -13,21 +16,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900">
-        <nav className="flex gap-6 px-6 py-4 border-b border-gray-200">
-          <Link href="/" className="hover:text-blue-600 transition-colors">
+    <html lang="en" className={sora.variable}>
+      <body className="min-h-screen text-slate-900">
+        <nav className="flex items-center gap-6 px-6 py-4 border-b border-slate-200">
+          <span className="font-heading font-bold text-brand mr-2">
+            Course Catalog
+          </span>
+          <Link href="/" className="hover:text-brand transition-colors">
             Home
           </Link>
           <Link
             href="/courses"
-            className="hover:text-blue-600 transition-colors"
+            className="hover:text-brand transition-colors"
           >
             Courses
           </Link>
           <Link
             href="/about"
-            className="hover:text-blue-600 transition-colors"
+            className="hover:text-brand transition-colors"
           >
             About
           </Link>

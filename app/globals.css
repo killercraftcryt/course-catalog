@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --color-brand: oklch(62% 0.14 195);
+  --color-brand-foreground: oklch(98% 0 0);
+}
+
+body {
+  background-color: oklch(98.5% 0.005 95);
+}

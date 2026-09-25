@@ -22,7 +22,7 @@ export default function CourseCard({
     <Link href={`/courses/${id}`}>
       <Card className="h-full transition-shadow hover:shadow-md">
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="font-heading">{title}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-3">
           <p className="text-slate-600">{description}</p>
