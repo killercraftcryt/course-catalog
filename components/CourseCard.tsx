@@ -25,8 +25,8 @@ export default function CourseCard({
           <CardTitle className="font-heading">{title}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-3">
-          <p className="text-slate-600">{description}</p>
-          <div className="flex items-center justify-between text-sm text-slate-500">
+          <p className="text-muted-foreground">{description}</p>
+          <div className="flex items-center justify-between text-sm text-muted-foreground">
             <span>{credits} credits</span>
             <Button variant="ghost" size="sm" className="pointer-events-none">
               ❤ {likes}

@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-3xl font-bold font-heading">Course Catalog</h1>
-      <p className="text-slate-600">
+      <p className="text-muted-foreground">
         Welcome! Browse the courses offered as part of the Advanced Web
         Technologies program.
       </p>

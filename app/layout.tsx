@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sora.variable}>
-      <body className="min-h-screen text-slate-900">
-        <nav className="flex items-center gap-6 px-6 py-4 border-b border-slate-200">
+      <body className="min-h-screen">
+        <nav className="flex items-center gap-6 px-6 py-4 border-b border-border">
           <span className="font-heading font-bold text-brand mr-2">
             Course Catalog
           </span>
